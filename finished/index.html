@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>App</title>
+    <meta name="description" content="Topcoat.css UI + Effeckt.css Performant Transitions & Animations">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/topcoat-mobile-dark.min.css">
+    <link rel="stylesheet" href="css/modules/page-transitions.css">
+    <style>
+        html, body{width: 100%; height: 100%; color: #ddd;}
+        #page-1{ 
+            width: 100%;
+            height: 100%;
+            background: url(img/bg.jpg) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        .logo{display: block; margin: 60px auto;}
+        .list-right{
+            display: inline-block;
+            position: relative;
+            float: right;
+        }
+        a, .topcoat-list__item { 
+            color: #c6c8c8; text-decoration: none; 
+        }
+        .topcoat-navigation-bar__title .topcoat-button {
+            margin: 10px 20px 0 0;
+        }
+        .credit{
+            padding: 20px;
+        }
+        #maps{ width:100%; height: 400px; }
+        .content{ padding: 20px;}
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #ccc; 
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div data-effeckt-page="page-1" id="page-1">
+        <div class="page-wrap no-transitions" id="page-wrap">
+            <div class="topcoat-navigation-bar">
+	           <div class="topcoat-navigation-bar__item center full">
+                    <h1 class="topcoat-navigation-bar__title"> Festival Survivor</h1>
+	           </div>
+            </div>
+            <img class="logo" src="img/fist.png">
+            <div class="topcoat-list">
+                <h3 class="topcoat-list__header">App Sections</h3>
+                <ul class="topcoat-list__container">
+                    <a href="#" class="effeckt-page-transition-button" data-effeckt-transition-in="slide-from-right" data-effeckt-transition-out="slide-to-left" data-effeckt-transition-page="page-2"><li class="topcoat-list__item">
+                    Schedule<span class="list-right">&#8594;</span>
+                    </li></a>
+                    <a href="#" id="link-3" class="effeckt-page-transition-button" data-effeckt-transition-in="slide-from-right" data-effeckt-transition-out="slide-to-left" data-effeckt-transition-page="page-3"><li class="topcoat-list__item">
+                    Friend Finder<span class="list-right">&#8594;</span>
+                    </li></a>
+                    <a href="#" class="effeckt-page-transition-button" data-effeckt-transition-in="slide-from-right" data-effeckt-transition-out="slide-to-left" data-effeckt-transition-page="page-4"><li class="topcoat-list__item">
+                    Customize<span class="list-right">&#8594;</span>
+                    </li></a>
+                </ul>
+                </div>
+                <div class="credit">Photo Credit: <a href="http://www.flickr.com/photos/41463627@N05/8999209560/">josemanuelerre</a><a href="https://creativecommons.org/licenses/by-nd/2.0/"> cc</a></div>
+                
+        </div><!-- div.page-wrap -->
+    </div><!-- div.page-1 -->
+
+    <div data-effeckt-page="page-2">
+        <div class="page-wrap" id="page-2">
+            <div class="topcoat-navigation-bar">
+                <div class="topcoat-navigation-bar__item full">      
+                    <h1 class="topcoat-navigation-bar__title"><button class="topcoat-button effeckt-page-transition-button" data-effeckt-transition-in="slide-from-left" data-effeckt-transition-out="slide-to-right" data-effeckt-transition-page="page-1">Home</button> Your Location</h1>
+                </div>
+            </div>
+            <div class="topcoat-list">
+                <h3 class="topcoat-list__header">Events</h3>
+                <ul class="topcoat-list__container">
+                    <li class="topcoat-list__item">
+                        Awesome Indie Rockers<span class="list-right">9:15pm</span>
+                    </li>
+                    <li class="topcoat-list__item">
+                        Captain Hipster<span class="list-right">10:15pm</span>
+                    </li>
+                    <li class="topcoat-list__item">
+                        Polaroid Camera Crew<span class="list-right">11:15pm</span>
+                    </li>
+                </ul>
+            </div>
+        </div><!-- div.page-wrap -->
+    </div><!-- div.page-2 -->
+
+    <div data-effeckt-page="page-3">
+        <div class="page-wrap" id="page-3">
+            <div class="topcoat-navigation-bar">
+                <div class="topcoat-navigation-bar__item full">
+                
+                    <h1 class="topcoat-navigation-bar__title"><button class="topcoat-button effeckt-page-transition-button" data-effeckt-transition-in="scale-down-from-front" data-effeckt-transition-out="scale-down-to-behind" data-effeckt-transition-page="page-1">Home</button> Friend Finder</h1>
+                </div>
+            </div>
+            <div id="maps"></div>
+            <div class="content">
+                Search Range: <input type="range" class="topcoat-range">
+            </div>
+        </div><!-- div.page-wrap -->
+    </div><!-- div.page-3 -->
+
+    <div data-effeckt-page="page-4">
+        <div class="page-wrap" id="page-4">
+            <div class="topcoat-navigation-bar">
+                <div class="topcoat-navigation-bar__item full">
+                    <h1 class="topcoat-navigation-bar__title"><button class="topcoat-button effeckt-page-transition-button" data-effeckt-transition-in="slide-from-bottom" data-effeckt-transition-out="slide-to-top" data-effeckt-transition-page="page-1">Home</button> Your Location</h1>
+                </div>
+            </div>
+            <div class="content">
+                <p>Twitter Friends: <hr>
+                    <label class="topcoat-switch">
+                        <input type="checkbox" class="topcoat-switch__input" checked>
+                        <div class="topcoat-switch__toggle"></div>
+                    </label>
+                </p>
+                <br>
+                <button class="topcoat-button--cta" >Save</button>
+            </div>
+            
+        </div><!-- div.page-wrap -->
+    </div><!-- div.page-4 -->
+    <!-- Libs -->
+    <script src="js/libs/jquery-2.1.1.min.js"></script>
+    <script src="js/libs/modernizr.js"></script>
+    <script src="js/Effeckt.js"></script>
+    <script src="js/modules/page-transitions.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>  
+        function displayMap() {
+            document.getElementById('maps').style.display="block";
+            initialize();
+        }
+        function initialize() {
+            var myOptions = {
+                zoom: 14,
+                center: new google.maps.LatLng(43.6561, -79.3803),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            map = new google.maps.Map(document.getElementById("maps"), myOptions);
+            console.log('click');
+        }
+        $( "#link-3" ).bind( "click touchstart", function() {
+            setTimeout(function() {
+                displayMap();
+                google.maps.event.trigger(map, "resize");
+            }, 500);
+        });
+    </script>
+</body>
+</html>
